@@ -1,0 +1,57 @@
+<ng-template #navLinks let-leftMarginOnLogin>
+  <a *ngFor="let lang of langs; let last=last;"
+     [class]="last?'right-margined':null"
+     mat-button
+     [color]="isCurrentLang(lang)?'primary':null"
+     (click)="changeLang(lang)">
+    {{ lang | uppercase }}
+  </a>
+  <a href="/blog" target="_blank" mat-stroked-button>{{ "navbar.blog" | translate }}</a>
+  <a routerLink="login"
+     mat-stroked-button
+     [class]="leftMarginOnLogin?'left-margined':null">
+    {{ "navbar.login" | translate }}
+  </a>
+</ng-template>
+
+<mat-toolbar>
+  <a mat-button routerLink="">
+    <img class="logo" src="/assets/img/logo.jpg"/>
+    <h1 class="big-screen" translate>navbar.title</h1>
+    <h1 class="small-screen" translate>navbar.min-title</h1>
+  </a>
+  <span class="kirby"></span>
+  <nav class="big-screen">
+    <ng-template *ngTemplateOutlet="navLinks; context: {$implicit: true}"></ng-template>
+  </nav>
+  <a *ngIf="this.isLoggedIn(); else unlogged" mat-button class="left-margined" (click)="toggleSidenav()">
+    <span class="right-margined big-screen">Guillermo Barbero</span>
+    <mat-icon>menu</mat-icon>
+  </a>
+  <ng-template #unlogged>
+    <a mat-button class="left-margined small-screen" (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </a>
+  </ng-template>
+</mat-toolbar>
+
+<mat-sidenav-container class="kirby">
+  <mat-sidenav #sidenav position="end" class="side-padding" [autoFocus]="false">
+    <div class="small-screen embed-nav" (click)="this.closeSidenav($event)">
+      <ng-template [ngTemplateOutlet]="navLinks"></ng-template>
+      <hr/>
+    </div>
+    <a mat-button [routerLink]="'user/' + option" *ngFor="let option of userOptions" (click)="this.sidenav.close()">{{ "user.options." + option | translate }}</a>
+  </mat-sidenav>
+  <mat-sidenav-content class="app-content side-padding">
+    <router-outlet></router-outlet>
+    <div class="footer-wrapper">
+      <hr/>
+      <footer>
+        <a routerLink="{{link}}" *ngFor="let link of footerLinks">{{ "footer." + link | translate}}</a>
+      </footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

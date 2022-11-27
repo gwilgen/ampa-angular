@@ -1,0 +1,6 @@
+export * from './profile/profile.component'
+export * from './family-gather/family-gather.component'
+export * from './lotto/lotto.component'
+export * from './lunch/lunch.component'
+export * from './suggestions/suggestions.component'
+export * from './birthday/birthday.component'

@@ -1,0 +1,33 @@
+body {
+  margin-top: 0.5em;
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.kirby {
+  flex: 1 1 auto
+}
+
+.side-padding {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.right-margined, .mat-button.right-margined, .mat-icon-button.right-margined, .mat-stroked-button.right-margined, .mat-flat-button.right-margined {
+  margin-right: 1em;
+}
+
+.left-margined, .mat-button.left-margined, .mat-icon-button.left-margined, .mat-stroked-button.left-margined, .mat-flat-button.left-margined {
+  margin-left: 1em;
+}
+
+@media (max-width: 800px) {
+  .big-screen {
+    display: none !important;
+  }
+}
+
+@media (min-width: 801px) {
+  .small-screen {
+    display: none !important;
+  }
+}

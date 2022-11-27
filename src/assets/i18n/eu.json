@@ -1,0 +1,49 @@
+{
+  "navbar": {
+    "title": "Zubiletaren AMPA",
+    "lang": "Hezkuntza",
+    "blog": "Berriak",
+    "login": "Hazi sesioia",
+    "logout": "Itxi sesioia"
+  },
+  "login": {
+    "email": "Dirección de correo electrónico",
+    "password": "Contraseña",
+    "forgot-password": "Olvidé mi contraseña",
+    "create-account": "Crear cuenta",
+    "oauth": "O inicia sesión con una de estas cuentas"
+  },
+  "langs": {
+    "es": "Español",
+    "eu": "Euskera"
+  },
+  "user": {
+    "options": {
+      "profile": "Nire perfilea",
+      "lotto": "Loteria",
+      "suggestions": "Propozamenduak",
+      "billing": "Ordainketak"
+    }
+  },
+  "common": {
+    "ok": "Aceptar",
+    "cancel": "Cancelar"
+  },
+  "landing": {
+    "index": "Índice"
+  },
+  "footer": {
+    "faq": "Preguntas frequentes",
+    "contact": "Contacto",
+    "omr": "Órgano de Máxima Representación (OMR)",
+    "school": "Colegio Zubileta"
+  },
+  "routes": {
+    "contact": "contacto",
+    "faq": "preguntas-frequentes",
+    "omr": "omr",
+    "school": "escuela",
+    "login": "inicio",
+    "ampa": "ampa"
+  }
+}

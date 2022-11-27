@@ -1,0 +1,5 @@
+export * from './contact/contact.component'
+export * from './faq/faq.component'
+export * from './home/home.component'
+export * from './omr/omr.component'
+export * from './school/school.component'
